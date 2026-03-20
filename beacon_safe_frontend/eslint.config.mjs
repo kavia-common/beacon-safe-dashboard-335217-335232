@@ -30,7 +30,17 @@ export default [
       "@typescript-eslint": tseslint,
     },
     rules: {
-      // Your custom rules here
+      // Use TS-aware unused-vars; allow common unused patterns and ignore type-only declarations.
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          ignoreRestSiblings: true
+        }
+      ]
     },
   },
   {

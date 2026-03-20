@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App-wide base styles */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+}
+
+/* Subtle grid texture for the "cyber" look */
+.bs-grid-bg {
+  background-image: radial-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -9px -9px;
+}
+
+/* Focus ring consistent across the app */
+.bs-focus {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
+}
