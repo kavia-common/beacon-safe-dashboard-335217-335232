@@ -3,7 +3,6 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { useAppContext } from "./context/AppContext";
 import { DashboardPage } from "./pages/DashboardPage";
-import { LoginPage } from "./pages/LoginPage";
 import { SettingsPage } from "./pages/SettingsPage";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 
@@ -22,8 +21,6 @@ export function App() {
 
   return (
     <Routes location={location}>
-      <Route path="/login" element={<LoginPage />} />
-
       <Route element={<ProtectedRoute />}>
         <Route
           path="/dashboard"

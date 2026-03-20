@@ -21,7 +21,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const onLogout = () => {
     logout();
-    nav("/login", { replace: true });
+    nav("/", { replace: true });
   };
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
